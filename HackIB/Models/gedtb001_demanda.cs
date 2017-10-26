@@ -65,7 +65,6 @@ namespace HackIB.Models
 
         public virtual gedtb031_cidadao gedtb031_cidadao { get; set; }
 
-        public virtual icotb001_unidades_caixa icotb001_unidades_caixa { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<gedtb002_historico_demanda> gedtb002_historico_demanda { get; set; }

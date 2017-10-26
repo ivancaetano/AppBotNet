@@ -11,7 +11,7 @@ namespace HackIB.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public gedtb007_tipo_origem_demanda()
         {
-            gedtb001_demanda = new HashSet<gedtb001_demanda>();
+          
         }
 
         [Key]
@@ -21,7 +21,5 @@ namespace HackIB.Models
         [StringLength(200)]
         public string no_tipo_origem_demanda { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<gedtb001_demanda> gedtb001_demanda { get; set; }
     }
 }

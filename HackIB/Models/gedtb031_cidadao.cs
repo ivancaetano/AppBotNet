@@ -11,7 +11,6 @@ namespace HackIB.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public gedtb031_cidadao()
         {
-            gedtb001_demanda = new HashSet<gedtb001_demanda>();
         }
 
         [Key]
@@ -53,7 +52,5 @@ namespace HackIB.Models
         [StringLength(7)]
         public string co_matricula { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<gedtb001_demanda> gedtb001_demanda { get; set; }
     }
 }

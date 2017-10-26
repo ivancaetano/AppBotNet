@@ -1,6 +1,6 @@
 ﻿var chat = angular.module('Chat', []);
 chat.controller('ChatController', function ($scope, $http) {
-    $scope.txNIS = "12135985173";
+    $scope.txNIS = "12589139081";
     $scope.mensagens = [
     ];
     $scope.dialogos = [
@@ -26,7 +26,13 @@ chat.controller('ChatController', function ($scope, $http) {
            
             $http.get("/SISGED/ListaDemandas?coNIS=" + $scope.txNIS)
                .then(function (response) {
-                   console.log(response);
+
+                   if (response.data.length>0) {
+                       var demanda=response.data[0];
+                       $scope.mensagens.push({ user: false, texto: 'Identifiquei que a sua última solicitação de serviços se encontra na situação "' + demanda.gedtb006_situacao.no_situacao + '", a justificativa apresentada foi: "' + $(demanda.gedtb002_historico_demanda.slice(-1)[0].tx_apontamento).text() + '"' });
+                   }
+
+                   
                });
         }
     };

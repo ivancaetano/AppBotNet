@@ -82,34 +82,19 @@ namespace HackIB.Models
                 .Property(e => e.no_situacao)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<gedtb006_situacao>()
-                .HasMany(e => e.gedtb001_demanda)
-                .WithRequired(e => e.gedtb006_situacao)
-                .WillCascadeOnDelete(false);
+           
 
             modelBuilder.Entity<gedtb007_tipo_origem_demanda>()
                 .Property(e => e.no_tipo_origem_demanda)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<gedtb007_tipo_origem_demanda>()
-                .HasMany(e => e.gedtb001_demanda)
-                .WithRequired(e => e.gedtb007_tipo_origem_demanda)
-                .WillCascadeOnDelete(false);
+        
 
             modelBuilder.Entity<gedtb008_tipo_demanda>()
                 .Property(e => e.no_tipo_demanda)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<gedtb008_tipo_demanda>()
-                .HasMany(e => e.gedtb001_demanda)
-                .WithRequired(e => e.gedtb008_tipo_demanda)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<gedtb008_tipo_demanda>()
-                .HasMany(e => e.gedtb004_servico)
-                .WithRequired(e => e.gedtb008_tipo_demanda)
-                .WillCascadeOnDelete(false);
-
+          
             modelBuilder.Entity<gedtb031_cidadao>()
                 .Property(e => e.co_nis)
                 .IsFixedLength()
@@ -146,10 +131,7 @@ namespace HackIB.Models
                 .IsFixedLength()
                 .IsUnicode(false);
 
-            modelBuilder.Entity<gedtb031_cidadao>()
-                .HasMany(e => e.gedtb001_demanda)
-                .WithRequired(e => e.gedtb031_cidadao)
-                .WillCascadeOnDelete(false);
+
 
             modelBuilder.Entity<icotb001_unidades_caixa>()
                 .Property(e => e.nu_unidade)
