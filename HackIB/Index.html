@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="./Content/bootstrap.css" rel="stylesheet" />
+    <link href="./Content/style.css" rel="stylesheet" />
+    <script src="./Scripts/jquery.js"></script>
+    <script src="./Scripts/tether.js"></script>
+    <script src="./Scripts/bootstrap.js"></script>
+    <script src="./Scripts/angular.js"></script>
+    <script src="./App/Chat.js"></script>
+</head>
+<body>
+
+
+    <div id="dvChat" class="card text-center chat ">
+        <form ng-app="Chat" ng-controller="ChatController">
+            <div class="card-header">
+                Assistente CAIXA
+                <img class="logoCaixa" src="IMG/logoCAIXA.png" />
+            </div>
+            <div id="chatBody" class="card-block">
+                <div ng-repeat="data in mensagens" class="row mensagem">
+                    <div ng-if="data.user==false">
+                        <img class="img-bot" src="IMG/logoCAIXA.png">
+                        <div class="card msgBot">
+                            <div>
+                                {{data.texto}}
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="data.user==true">
+                        <div class="card msgUser">
+                            <div>
+                                {{data.texto}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">...</span>
+                            <input type="text" ng-keyup="$event.keyCode == 13 && msgUsuario()" ng-model="txMensagem" class="form-control" placeholder="Digite aqui sua mensagem" aria-describedby="basic-addon1">
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">NIS</span>
+                            <input type="text" ng-model="txNIS" class="form-control" placeholder="NIS" aria-describedby="basic-addon1">
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

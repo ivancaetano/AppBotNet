@@ -1,0 +1,85 @@
+﻿.card-header {
+    text-align: left;
+    background-color: #296fa7;
+    color: white;
+    font-weight: bold;
+    height:5%;
+}
+
+.card-footer {
+    text-align: left;
+    background-color: #f4f4f6;
+    height:10%;
+    border:0;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.logoCaixa {
+    float: right;
+    height: 20px;
+}
+.card{
+     height:100%;
+}
+.chat {
+    width: 100%;
+    
+}
+html,body,form{
+    height:100%;
+}
+.card-block
+{
+    height: 85%;
+    overflow: scroll;
+    overflow-x:hidden;
+}
+.img-bot {
+    margin-top:10px;
+    border-radius: 55%;
+    height: 30px;
+    float: left;
+    margin-right: 10px;
+}
+
+.msgBot {
+    margin-top:10px;
+    max-width: 100%;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 13px;
+    background-color: #f4f4f6;
+    float:left;
+}
+
+.msgUser {
+    margin-top:10px;
+    display: inline-block;
+    float: right;
+    max-width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 13px;
+    background-color: #296fa7;
+    color: white;
+}
+.mensagem{
+    display: inline-block;
+    width:100%;
+}
